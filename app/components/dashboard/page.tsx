@@ -5,9 +5,13 @@ import './App.css';
 import {  mainCharacter, dollarCoin } from '../../assets/images';
 import axios from 'axios';
 import { useStore } from './dashboardStore';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
 
 
 export default function App() {
+  
 
   const coins = useStore((state: { coins: any }) => state.coins)
   const setCoins = useStore((state) => state.setCoin)
