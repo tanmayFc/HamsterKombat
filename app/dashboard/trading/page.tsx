@@ -1,13 +1,12 @@
 "use client";
-
 import React, { useEffect } from 'react';
-import './App.css';
-import {  mainCharacter, dollarCoin } from '../../assets/images';
+import './styles/App.css';
+import {  mainCharacter, dollarCoin } from '../../assets/images/index';
 import axios from 'axios';
-import { useStore } from './dashboardStore';
+import { useStore } from '../../../lib/store/userStore';
 
 
-export default function App() {
+const Trading=() =>{
 
   const coins = useStore((state: { coins: any }) => state.coins)
   const setCoins = useStore((state) => state.setCoin)
@@ -64,3 +63,4 @@ export default function App() {
   );
 };
 
+export default Trading;

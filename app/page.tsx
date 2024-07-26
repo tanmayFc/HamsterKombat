@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import App from "./components/dashboard/page";
+// import App from "./components/dashboard/page";
 
 export default function IndexPage() {
-  return <App />;
+  return <>hello world</> ;
 }
 
 export const metadata: Metadata = {
