@@ -1,8 +1,9 @@
+"use-client"
 import type { ReactNode } from "react";
 import { theme } from "../theme";
 
 import "./styles/globals.css";
-import { ThemeProvider } from "@emotion/react/types";
+import { ThemeProvider } from "@mui/material";
 
 interface Props {
   readonly children: ReactNode;
