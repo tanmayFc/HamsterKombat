@@ -1,5 +1,4 @@
 import type { ReactNode } from "react";
-import StoreProvider from "./StoreProvider";
 
 import "./styles/globals.css";
 
@@ -18,16 +17,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    // <SessionProvider>
-    
-      <StoreProvider>
         <html lang="en">
             <body>
               {children}
             </body>
         </html>
-      </StoreProvider>
-    
-    //  </SessionProvider> 
   );
 }

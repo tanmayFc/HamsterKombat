@@ -1,4 +1,4 @@
-import { IconProps } from "../types";
+import { IconProps } from "../../components/dashboard/types";
 
 
 const Coins: React.FC<IconProps> = ({ size = 24, className = "" }) => {

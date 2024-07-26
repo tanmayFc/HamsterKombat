@@ -2,16 +2,15 @@
 
 import React, { useEffect } from 'react';
 import './App.css';
-import {  mainCharacter, dollarCoin } from './images';
-import { RootState } from '@/lib/store';
-import { useSelector,useDispatch } from 'react-redux';
-import { setCoins } from '@/lib/features/counter/profileSlice';
+import {  mainCharacter, dollarCoin } from '../../assets/images';
 import axios from 'axios';
+import { useStore } from './dashboardStore';
 
-const App: React.FC = () => {
 
-  const coins = useSelector((state: RootState) => state.profile.coins);
-  const dispatch = useDispatch();
+export default function App() {
+
+  const coins = useStore((state: { coins: any }) => state.coins)
+  const setCoins = useStore((state) => state.setCoin)
 
   const handleCardClick = (e: React.MouseEvent<HTMLDivElement>) => {
     const card = e.currentTarget;
@@ -22,7 +21,7 @@ const App: React.FC = () => {
     setTimeout(() => {
       card.style.transform = '';
     }, 100);
-    dispatch(setCoins(2));
+    setCoins(2);
   };
   const apicall =async ()=>{
     console.log(coins)
@@ -64,6 +63,4 @@ const App: React.FC = () => {
     </div>
   );
 };
-
-export default App;
 
