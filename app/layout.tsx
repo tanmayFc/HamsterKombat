@@ -1,8 +1,8 @@
 import type { ReactNode } from "react";
-import { ThemeProvider } from "@emotion/react";
 import { theme } from "../theme";
 
 import "./styles/globals.css";
+import { ThemeProvider } from "@emotion/react/types";
 
 interface Props {
   readonly children: ReactNode;
