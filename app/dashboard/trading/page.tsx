@@ -4,9 +4,15 @@ import './styles/App.css';
 import {  mainCharacter, dollarCoin } from '../../assets/images/index';
 import axios from 'axios';
 import { useStore } from '../../../lib/store/userStore';
+import { useStore } from './dashboardStore';
+import TelegramIcon from '@mui/icons-material/Telegram';
+import InstagramIcon from '@mui/icons-material/Instagram';
+import XIcon from '@mui/icons-material/X';
 
 
 const Trading=() =>{
+export default function App() {
+  
 
   const coins = useStore((state: { coins: any }) => state.coins)
   const setCoins = useStore((state) => state.setCoin)
