@@ -72,7 +72,7 @@ export const theme = createTheme({
   },
   breakpoints: {
     values: {
-      xs: 420,
+      xs: 0,
       sm: 460,
       md: 460,
       lg: 460,
@@ -111,19 +111,18 @@ export const theme = createTheme({
     },
     h5: {
       fontStyle: "normal",
-      fontWeight: 400,
-      fontSize: "1.5rem",
+      fontWeight: 900,
+      fontSize: "26px",
       //?updated 24px
-      lineHeight: "120%",
-      color: "#24282B",
+      lineHeight: "100%",
+      color: "#FFFFFF",
     },
     h6: {
       fontStyle: "normal",
       fontWeight: 400,
-      fontSize: "1.250rem",
-      // 20px
-      lineHeight: "120%",
-      color: "#24282B",
+      fontSize: "30px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
     },
     body1: {
       fontStyle: "normal",
