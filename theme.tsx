@@ -1,49 +1,114 @@
 "use client";
-import { createTheme } from "@mui/material";
+import { createTheme } from "@mui/material/styles";
 import { Overpass } from "next/font/google";
 
 const overpass = Overpass({ subsets: ["latin"] });
 
 export const theme = createTheme({
   palette: {
+    mode: "dark",
     primary: {
-      main: "#FFFFFF",
-      light: "#f5f4fe",
+      main: "#f480e2",
+      dark: "#f480e2",
     },
     secondary: {
-      main: "#040616",
-      light: "#8697B4",
+      main: "#fff",
+      light: "#fff",
     },
-    success: {
-      main: "#196C6C",
+    background: {
+      default: "#121212",
+      paper: "#1E1E1E",
     },
-    info: {
-      main: "#AEB8B8",
-      light: "#F5F4FF",
+    text: {
+      primary: "#fff",
+      secondary: "#B0BEC5",
+    },
+  },
+  breakpoints: {
+    values: {
+      xs: 0,
+      sm: 460,
+      md: 460,
+      lg: 460,
+      xl: 460,
     },
   },
   typography: {
-    subtitle1: {
-      fontFamily: overpass.style.fontFamily,
-      fontWeightRegular: 600,
-      fontSize: 28,
-    },
+    fontFamily: overpass.style.fontFamily,
     h1: {
-      fontFamily: overpass.style.fontFamily,
-      fontWeightRegular: 600,
-      fontSize: 20,
+      fontStyle: "normal",
+      fontWeight: 900,
+      fontSize: "24px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
+    },
+    h2: {
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "20px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
+    },
+    h3: {
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "16px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
+    },
+    h4: {
+      fontStyle: "normal",
+      fontWeight: 600,
+      fontSize: "18px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
+    },
+    h5: {
+      fontStyle: "normal",
+      fontWeight: 900,
+      fontSize: "26px",
+      //?updated 24px
+      lineHeight: "100%",
+      color: "#FFFFFF",
+    },
+    h6: {
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "30px",
+      lineHeight: "100%",
+      color: "#FFFFFF",
     },
     body1: {
-      fontFamily: overpass.style.fontFamily,
-      fontWeightRegular: 600,
-      fontSize: 14,
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "1.000rem",
+      //? 16px updated
+      lineHeight: "150%",
+      color: "#24282B",
     },
     body2: {
-      fontFamily: overpass.style.fontFamily,
-      color: "secondary.main",
-      fontWeightRegular: 600,
-      fontSize: 15,
+      //? updated
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "0.875rem",
+      // 14px
+      lineHeight: "normal",
+      // fontFamily: "Inter",
+      color: "#24282B",
     },
+    subtitle1: {
+      fontStyle: "normal",
+      fontWeight: 400,
+      fontSize: "0.625rem",
+      // 10px
+      color: "#24282B",
+      lineHeight: "120%",
+    },
+    subtitle2: {},
+
   },
-  breakpoints: {},
 });
+
+
+
+export default theme;
