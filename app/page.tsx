@@ -11,16 +11,16 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 
 export default function IndexPage() {
   const outerContainer = {
-    width: '100vw',
-    height: '100vh',
+    width: '100%',
+    height: '100%',
     position: 'relative',
   };
 
   const innerContainer = {
     xs:{
-      width:'100dvw'
+      width:'100%'
     },
-    height: '100vh',
+    height: '100%',
     background: 'radial-gradient(#1f344c, black)',
     position: 'relative',
     display:'flex',
@@ -49,7 +49,7 @@ export default function IndexPage() {
 
   const textParent = {
     position: 'absolute',
-    bottom:100,
+    bottom:60,
     height:'fit-content',
     zIndex:3
   }
@@ -67,6 +67,10 @@ export default function IndexPage() {
     height:'fit-content',
     paddingBottom:'20px',
     marginTop:'17px'
+  }
+
+  const iconContainer = {
+
   }
 
   return (
@@ -91,15 +95,15 @@ export default function IndexPage() {
               <Grid item>
                 <Typography variant="h4">More info in official channels</Typography>
               </Grid>
-              <Grid item container>
+              <Grid item container sx={iconContainer} justifyContent="center" gap={3}>
                 <Grid item>
-                  <Typography variant="h6">More info in official channels</Typography>
+                  <Typography variant="h6"> <XIcon/> </Typography>
                 </Grid>
                 <Grid item>
-                  <Typography variant="h6">More info in official channels</Typography>
+                  <Typography variant="h6"> <InstagramIcon/> </Typography>
                 </Grid>
                 <Grid item>
-                  <Typography variant="h6">More info in official channels</Typography>
+                  <Typography variant="h6"> <TelegramIcon/> </Typography>
                 </Grid>
               </Grid>
             </Grid>
