@@ -124,7 +124,12 @@ const styletext = {
   color: "#F0F6FF",
 };
 const outerbox = {
-  width: "100%",
+  width:{
+    md:'100%',
+    sm:'100%',
+    lg:"25%"
+  },
+  minWidth:"368px",
   height: "8vh",
   position: "absolute",
   bottom: "1.5rem",

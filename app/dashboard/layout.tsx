@@ -8,8 +8,8 @@ const layout = ({
   children: React.ReactNode;
 }>) => {
   return (
-    <div style={{ width: "100%", height: "100%" }}>
-      <Box sx={{position:"relative",height:"100%",overflow:"hidden",display:"flex",justifyContent:"center"}}>
+    <div style={{ width: "100%", height: "100%"}}>
+      <Box sx={{height:"100%",overflow:"hidden",display:"flex",justifyContent:"center"}}>
         <Headerbar />
         {children}
         <Bottombar />

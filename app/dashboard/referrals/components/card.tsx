@@ -54,13 +54,13 @@ const innerbox = {
   justifyContent:"center"};
 const mainBox = {
   width: "90%",
-  height: "6vh",
+  height: "7vh",
   display: "flex",
   borderRadius: "4px",
 };
 const inner1 = {
   width: "86%",
-  height: "6vh",
+  height: "7vh",
   borderRadius: "4px",
   background: "#5588BC66",
   border: "0.5px solid #458BEB",
@@ -71,7 +71,7 @@ const inner1 = {
 };
 const inner2 = {
   width: "36%",
-  height: "6vh",
+  height: "7vh",
   borderRadius: "4px",
   background: "#5588BC66",
   border: "0.5px solid #458BEB",
@@ -109,7 +109,7 @@ const upperImage = (image: any) => ({
   backgroundSize: "cover",
   backgroundPosition: "center",
   position: "absolute",
-  top: "30px",
+  top: "24px",
   left:"5px",
   borderRadius: "50%",
   width:"40px",

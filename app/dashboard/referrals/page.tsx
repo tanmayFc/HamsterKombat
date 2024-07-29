@@ -15,7 +15,7 @@ export default function App() {
     <Grid sx={mainBox}>
       <Grid sx={listMain}>
         <Grid sx={{ marginLeft: "1.5rem", marginTop: "6rem" }}>
-         <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",marginRight:"1.2rem"}}> <Typography sx={inviteFreind}>Invite Freinds!</Typography><ContentCopyIcon sx={{color:"white",fontSize:"20px",opacity:".8"}}/></Box>
+         <Box sx={{display:"flex",justifyContent:"space-between",alignItems:"center",marginRight:"1rem"}}> <Typography sx={inviteFreind}>Invite Freinds!</Typography><ContentCopyIcon sx={{color:"white",fontSize:"20px",opacity:".8"}}/></Box>
           <Typography sx={inviteFreindsub}>
             You and your friend will receive bonuses
           </Typography>

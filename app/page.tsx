@@ -1,13 +1,17 @@
-"use-client"
+"use client"
 import type { Metadata } from "next";
 import { Grid,
          Typography,      
  } from "@mui/material";
 // import App from "./components/dashboard/page";
+import axios from "axios"
 import goat from "../app/assets/images/goat.png"
 import XIcon from '@mui/icons-material/X';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
+import { useEffect } from "react";
+import { useStore } from "@/lib/store/userStore";
+import { useRouter } from "next/navigation";
 
 export default function IndexPage() {
   const outerContainer = {
@@ -68,11 +72,20 @@ export default function IndexPage() {
     paddingBottom:'20px',
     marginTop:'17px'
   }
-
-  const iconContainer = {
-
+  const router = useRouter()
+  const setToken = useStore((state) => state.setToken);
+  const setCoins = useStore((state) => state.setCoin);
+  const apiCall = async (userId:any)=>{
+      const response = await axios.post("http://localhost:3002/userlogin",{userid:userId});
+      if(response.data.status===201){
+        setToken(response.data.token);
+        setCoins(response.data.coin)
+        router.push('/dashboard/trading')
+      }
   }
-
+  useEffect(()=>{
+    apiCall("fewerCliks");
+  },[])
   return (
     <>
       <Grid container sx={outerContainer} justifyContent="center" alignItems="center" direction="column">
@@ -95,7 +108,7 @@ export default function IndexPage() {
               <Grid item>
                 <Typography variant="h4">More info in official channels</Typography>
               </Grid>
-              <Grid item container sx={iconContainer} justifyContent="center" gap={3}>
+              <Grid item container  justifyContent="center" gap={3}>
                 <Grid item>
                   <Typography variant="h6"> <XIcon/> </Typography>
                 </Grid>
@@ -113,7 +126,3 @@ export default function IndexPage() {
     </>
   );
 }
-
-export const metadata: Metadata = {
-  title: "Redux Toolkit",
-};

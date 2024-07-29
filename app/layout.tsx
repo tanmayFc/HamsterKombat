@@ -21,7 +21,7 @@ const wrap = {
     sm:'100dvw',
   },
   height:'100dvh',
-  padding:'0px'
+  padding:'0px',
 }
 
 export default function RootLayout({
