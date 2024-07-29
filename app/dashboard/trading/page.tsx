@@ -54,6 +54,9 @@ export default function App() {
 
   return (
     <Grid sx={mainBox}>
+      <Box sx={{height:"90vh",overflow:"scroll"}}>
+
+
       <Grid
         container
         lg={12}
@@ -159,6 +162,7 @@ export default function App() {
         <Grid><EnergyBoost image = {energy} name = "4000/4000"/></Grid>
         <Grid><EnergyBoost image = {boost} name = "boost"/></Grid>
       </Grid>
+      </Box>
     </Grid>
   );
 }
@@ -169,7 +173,8 @@ const innerbox = {
   // position: "absolute",
   // top: "10rem",
   width: "100vw",
-  height: "45vh",
+  height: "auto",
+  minHeight:"45vh",
   overflow: "hidden",
 };
 const mainBox = {

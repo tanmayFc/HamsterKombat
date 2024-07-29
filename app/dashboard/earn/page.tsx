@@ -1,13 +1,9 @@
 "use client";
-import React, { useEffect } from "react";
-import axios from "axios";
-import { useStore } from "../../../lib/store/userStore";
+import React from "react";
 import { Box, Grid, Typography } from "@mui/material";
-import { Height } from "@mui/icons-material";
 import image from "../assets/icon/earnmorecoin.png";
 import doloricon from "../assets/image/dolor_background.png";
 import { dollarCoin } from "../../assets/images/index";
-import goat from "../assets/image/goat.png";
 import youtube from "../assets/icon/youtube.png";
 import dailyTask from "../assets/icon/dailyreward.png";
 import Card from "./components/card";
@@ -126,7 +122,7 @@ const subHeading = {
 };
 
 const listMain = {
-    height:"95vh",
+    height:"87.3vh",
     overflow:"scroll",
     paddingBottom:"2.5rem"
 }
