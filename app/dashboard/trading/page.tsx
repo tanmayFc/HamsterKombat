@@ -54,7 +54,9 @@ export default function App() {
 
   return (
     <Grid sx={mainBox}>
-      <Box sx={{height:"90vh",overflow:"scroll"}}>
+      <Box sx={{height:"90%",overflow:"scroll",'&::-webkit-scrollbar': {
+  display: 'none',
+},}}>
 
 
       <Grid
@@ -66,14 +68,15 @@ export default function App() {
           alignItems: "center",
           justifyContent: "center",
           paddingTop: "4.5rem",
+          width:"100%"
         }}
       >
-        <Grid item lg={6} sx={equitybox("#458BEB")}>
+        <Grid item lg={5} sx={equitybox("#458BEB")}>
           <Typography sx={{ color: "#C9C9C9" }}>Equity Balance</Typography>
           <Typography sx={typographyequity}>$26,000.456</Typography>
           <Box sx={colorBorder("#458BEB")} />
         </Grid>
-        <Grid item lg={6} sx={equitybox("#DCAB38")}>
+        <Grid item lg={5} sx={equitybox("#DCAB38")}>
           <Typography sx={{ color: "#C9C9C9" }}>Profit & Loss</Typography>
           <Typography sx={typographyProfit}>
             <img
@@ -94,13 +97,13 @@ export default function App() {
         alignItems="center"
         sx={{ marginTop: "3rem" }}
       >
-        <Grid lg={4}>
+        <Grid lg={3}>
           <Card image={dailyAttendance} name="Daily Attendance" />
         </Grid>
-        <Grid lg={4}>
+        <Grid lg={3}>
           <Card image={dailyQuiz} name="Daily Quiz" />
         </Grid>
-        <Grid lg={4}>
+        <Grid lg={3}>
           <Card image={secretCode} name="Secret Key" />
         </Grid>
       </Grid>
@@ -172,14 +175,14 @@ const innerbox = {
   backgroundSize: "contain",
   // position: "absolute",
   // top: "10rem",
-  width: "100vw",
+  width: "100%",
   height: "auto",
   minHeight:"45vh",
   overflow: "hidden",
 };
 const mainBox = {
-  width: "100vw",
-  height: "100vh",
+  width: "100%",
+  height: "100%",
   /* background-color: black; */
   background:
     "linear-gradient(to bottom, #000000 22%, #1f344c 50%, #000000 90%)",

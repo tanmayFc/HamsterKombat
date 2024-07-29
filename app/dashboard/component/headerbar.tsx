@@ -10,7 +10,7 @@ const Headerbar = () => {
         backgroundColor: "transparent",
         marginTop: "1.5rem",
         position: "absolute",
-        width: "100vw",
+        width: "100%",
       }}
     >
       <Typography sx={heading}>GOAT TRADER</Typography>

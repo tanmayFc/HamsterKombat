@@ -23,32 +23,34 @@ const card = (props: any) => {
 
 export default card;
 const mainUpper = {
-  width: "90vw",
+  width: "100%",
   height: "9vh",
   display: "flex",
   alignItems: "end",
   position: "relative",
+  marginLeft:"1.5rem",
+  marginRight:"1.5rem"
 };
 const mainBox = {
-  width: "90vw",
-  height: "6vh",
+  width: "90%",
+  height: "7vh",
   display: "flex",
   borderRadius: "4px",
 };
 const inner1 = {
-  width: "68vw",
-  height: "6vh",
+  width: "86%",
+  height: "7vh",
   borderRadius: "4px",
   background: "#5588BC66",
   border: "0.5px solid #458BEB",
   clipPath: "polygon(0% 0%, 81% 0%, 100% 100%, 0% 100%)",
   display:"flex",
   alignItems:"center",
-  paddingRight:"2rem"
+  paddingRight:"2rem",
 };
 const inner2 = {
-  width: "33vw",
-  height: "6vh",
+  width: "36%",
+  height: "7vh",
   borderRadius: "4px",
   background: "#5588BC66",
   border: "0.5px solid #458BEB",

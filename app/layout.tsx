@@ -1,6 +1,7 @@
 "use-client"
 import type { ReactNode } from "react";
 import { theme } from "../theme";
+import { Container, Box } from "@mui/material";
 
 import "./styles/globals.css";
 import { ThemeProvider } from "@mui/material";
@@ -14,6 +15,15 @@ export const metadata = {
   description: 'Web3Modal Example'
 }
 
+const wrap = {
+  width:{
+    md:'450px',
+    sm:'100dvw',
+  },
+  height:'100dvh',
+  padding:'0px'
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -21,11 +31,15 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider theme={theme}>
+      
         <html lang="en">
             <body>
+            <Container sx={wrap}>
               {children}
+            </Container>
             </body>
         </html>
-      </ThemeProvider>
+      
+    </ThemeProvider>
   );
 }

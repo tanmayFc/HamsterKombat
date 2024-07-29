@@ -1,16 +1,21 @@
-import React from 'react'
-import Bottombar from './component/bottombar'
-import Headerbar from './component/headerbar';
+import React from "react";
+import Bottombar from "./component/bottombar";
+import Headerbar from "./component/headerbar";
+import { Box } from "@mui/material";
 const layout = ({
-    children,
-  }: Readonly<{
-    children: React.ReactNode;
-  }>) => {
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) => {
   return (
-    <div>
-      <Headerbar/>{children}
-    <Bottombar/></div>
-  )
-}
+    <div style={{ width: "100%", height: "100%" }}>
+      <Box sx={{position:"relative",height:"100%",overflow:"hidden",display:"flex",justifyContent:"center"}}>
+        <Headerbar />
+        {children}
+        <Bottombar />
+      </Box>
+    </div>
+  );
+};
 
-export default layout
+export default layout;

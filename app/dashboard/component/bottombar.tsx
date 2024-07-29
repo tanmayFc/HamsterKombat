@@ -39,7 +39,7 @@ const Bottombar = () => {
       <Grid container lg={12} sx={innerbox}>
         <Grid
           item
-          lg={2.2}
+          lg={1.5}
           sx={iconBox(activeItem, "/dashboard/trading")}
           onClick={() => handleRouting(1)}
         >
@@ -50,7 +50,7 @@ const Bottombar = () => {
         </Grid>
         <Grid
           item
-          lg={2.2}
+          lg={1.5}
           sx={iconBox(activeItem, "/dashboard/instrument")}
           onClick={() => handleRouting(2)}
         >
@@ -61,7 +61,7 @@ const Bottombar = () => {
         </Grid>
         <Grid
           item
-          lg={2.2}
+          lg={1.5}
           sx={iconBox(activeItem, "/dashboard/referrals")}
           onClick={() => handleRouting(3)}
         >
@@ -72,7 +72,7 @@ const Bottombar = () => {
         </Grid>
         <Grid
           item
-          lg={2.2}
+          lg={1.5}
           sx={iconBox(activeItem, "/dashboard/earn")}
           onClick={() => handleRouting(4)}
         >
@@ -81,7 +81,7 @@ const Bottombar = () => {
         </Grid>
         <Grid
           item
-          lg={2.2}
+          lg={1.5}
           sx={iconBox(activeItem, "/dashboard/airdrops")}
           onClick={() => handleRouting(5)}
         >
@@ -124,11 +124,11 @@ const styletext = {
   color: "#F0F6FF",
 };
 const outerbox = {
-  width: "97vw",
+  width: "100%",
   height: "8vh",
-  position: "fixed",
-  bottom: "1rem",
-  marginLeft: "4px",
+  position: "absolute",
+  bottom: "1.5rem",
+  // marginLeft: "14px",
   zIndex: "1",
 };
 const innerbox = {

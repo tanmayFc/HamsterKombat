@@ -31,7 +31,7 @@ const card = (props: any) => {
 
 export default card;
 const mainUpper = {
-  width: "90vw",
+  width: "90%",
   height: "9vh",
   display: "flex",
   alignItems: "end",
@@ -46,20 +46,20 @@ const dollar =(image:any) =>({
   overflow: "hidden",
 });
 const innerbox = {
-  width: "55vw",
+  width: "55%",
   height: "6vh",
   display:"flex",
   marginLeft:"4rem",
   flexDirection:"column",
   justifyContent:"center"};
 const mainBox = {
-  width: "90vw",
+  width: "90%",
   height: "6vh",
   display: "flex",
   borderRadius: "4px",
 };
 const inner1 = {
-  width: "68vw",
+  width: "86%",
   height: "6vh",
   borderRadius: "4px",
   background: "#5588BC66",
@@ -70,7 +70,7 @@ const inner1 = {
   paddingRight:"2rem"
 };
 const inner2 = {
-  width: "33vw",
+  width: "36%",
   height: "6vh",
   borderRadius: "4px",
   background: "#5588BC66",

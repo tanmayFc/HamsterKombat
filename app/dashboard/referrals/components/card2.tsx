@@ -47,7 +47,7 @@ const dollar = {
   overflow: "hidden",
 };
 const outerbox = {
-  width: "90vw",
+  width: "90%",
   height: "7vh",
   position: "relative",
   display: "flex",
@@ -57,11 +57,12 @@ const outerbox = {
   borderRadius:"4px"
 };
 const innerbox = {
-  width: "72vw",
+  width: "83%",
   height: "7vh",
   display:"flex",
   flexDirection:"column",
-  justifyContent:"center"};
+  justifyContent:"center"
+}
 const bag = (image: any) => ({
   backgroundImage: `url(${image})`,
   backgroundSize: "cover",

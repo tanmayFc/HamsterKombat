@@ -105,8 +105,8 @@ const earnMore = {
   marginTop: "5px",
 };
 const mainBox = {
-  width: "100vw",
-  height: "100vh",
+  width: "100%",
+  height: "100%",
   /* background-color: black; */
   background:
     "linear-gradient(to bottom, #000000 22%, #1f344c 50%, #000000 90%)",
@@ -122,64 +122,10 @@ const subHeading = {
 };
 
 const listMain = {
-    height:"87.3vh",
+    height:"87.3%",
     overflow:"scroll",
+    '&::-webkit-scrollbar': {
+  display: 'none',
+},
     paddingBottom:"2.5rem"
 }
-const equitybox = (color: any) => ({
-  backgroundColor: "#222222",
-  width: "151px",
-  height: "50px",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  flexDirection: "column",
-  position: "relative",
-  borderRadius: "4px",
-  border: `.0001px solid ${color}`,
-});
-
-const colorBorder = (color: any) => ({
-  position: "absolute",
-  bottom: "-3px",
-  height: "50px",
-  width: "70px",
-  borderBottom: `3px solid ${color}`,
-  borderRadius: "2px",
-});
-
-const typographyequity = {
-  color: "#458BEB",
-  fontSize: "12px",
-  marginTop: "1px",
-};
-
-const typographyProfit = {
-  display: "flex",
-  alignItems: "center",
-  gap: ".3rem",
-  color: "#ffffff",
-  fontSize: "12px",
-};
-
-const innercircleCharacter = {
-  width: "200px",
-  height: "200px",
-  padding: "1rem",
-  borderRadius: "50%",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-  background: "radial-gradient(circle,#2c63ae,#1f344c)",
-  overflow: "hidden",
-};
-
-const outercircleCharacter = {
-  width: "224px",
-  height: "224px",
-  borderRadius: "50%",
-  cursor: "pointer",
-  backgroundColor: "#426eab",
-  display: "grid",
-  placeItems: "center",
-};
