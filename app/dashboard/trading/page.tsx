@@ -36,13 +36,13 @@ export default function App() {
     setTimeout(() => {
       card.style.transform = "";
     }, 100);
-    setCoins(2);
+    setCoins(pointsToAdd);
   };
   const handleAnimationEnd = (id: number) => {
     setClicks((prevClicks) => prevClicks.filter((click) => click.id !== id));
   };
   const apicall = async () => {
-    console.log(coins);
+    setPointsToAdd(Math.floor(coins/1000)+1)
     if (coins % 5 === 0) {
       try {
         const response = await axios.post(
@@ -190,7 +190,7 @@ export default function App() {
               }}
               onAnimationEnd={() => handleAnimationEnd(click.id)}
             >
-              {pointsToAdd}
+              +{pointsToAdd}
             </div>
           ))}
             </div>

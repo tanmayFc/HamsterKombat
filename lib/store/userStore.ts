@@ -7,6 +7,7 @@ export const useStore = create(
       coins: 0,
       token:"",
       setCoin: (a:number) => set({ coins: get().coins + a }),
+      setInitialCoin: (a:number) => set({ coins: a }),
       setToken: (a:string)=> set({token:a})
     }),
     {

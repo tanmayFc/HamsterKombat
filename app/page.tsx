@@ -73,14 +73,17 @@ export default function IndexPage() {
     marginTop:'17px'
   }
   const router = useRouter()
+  const coin = useStore((state) => state.coins);
   const setToken = useStore((state) => state.setToken);
-  const setCoins = useStore((state) => state.setCoin);
+  const setInitialCoins = useStore((state) => state.setInitialCoin);
   const apiCall = async (userId:any)=>{
       const response = await axios.post("http://localhost:3002/userlogin",{userid:userId});
       if(response.data.status===201){
         setToken(response.data.token);
-        setCoins(response.data.coin)
-        router.push('/dashboard/trading')
+        setInitialCoins(Math.max(response.data.coin,coin))
+        setTimeout(()=>{
+          router.push('/dashboard/trading')
+        },2000)
       }
   }
   useEffect(()=>{
